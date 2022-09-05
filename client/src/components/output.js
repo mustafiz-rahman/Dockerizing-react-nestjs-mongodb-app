@@ -1,6 +1,17 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
+const myStyle ={
+    
+    ul:{
+      listStyleType: "outside",
+      marginTop: "50px",
+      padding: "0px",
+      background: "#cce5ff",
+      color: "darkblue",
+      margin: "5px"
+    }
+  }
 
 
 export default function Output() {
@@ -19,7 +30,7 @@ export default function Output() {
     return (
             <div>
                 {name.map((note) => (
-                    <ul key={note._id}>
+                    <ul key={note._id} style={myStyle.ul}>
                         <li>
                         {note.text}
                         </li>

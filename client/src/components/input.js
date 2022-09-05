@@ -1,6 +1,17 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
+const myStyle ={
+  input:{
+    padding:"10px",
+    width:"300px"
+  },
+  button:{
+    padding:"10px",
+    marginTop:"10px",
+    width:"100px"
+  }
+}
 
 export default function Input() {
   const [userName, createUser] = useState('')
@@ -20,6 +31,7 @@ export default function Input() {
       <form onSubmit={onSubmit}>
         <div>
           <input
+            style={myStyle.input}
             type="text"
             placeholder="Name"
             onChange={(event) => {
@@ -29,7 +41,7 @@ export default function Input() {
           />
           <br />
         </div>
-        <button type="submit" className="btn btn-danger">
+        <button style={myStyle.button} type="submit" className="btn btn-danger">
           Create
         </button>
       </form>
